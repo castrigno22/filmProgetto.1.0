@@ -1,0 +1,33 @@
+
+  <div class="row content">
+    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+      <form class="jumbotron">
+        <h3 class="display-4">INSERISCI IL TITOLO</h3>
+        <div class="form-group">
+          <label for="title">Titolo:</label>
+          <input name="title" type="text"  #newTitle class="form-control">
+          <button (click) = "trova(newTitle)" type = "button">cerca</button>
+        </div>
+        
+        
+      
+    </form>
+    </div>
+    <div class="col-lg-6 pt-4" data-aos="fade-left" data-aos-delay="200">      
+      <app-map [titles]="newTitle.value"></app-map>
+    </div>
+  </div>
+  <section id="about" class="about">
+    <div class="container">
+      <ul *ngFor="let vet of dati" class=" container list">
+        <span class="span">show_id : </span>{{vet.show_id}}<br>
+        <span class="span">type: </span>{{vet.type}}<br>
+        <span class="span">title: </span>{{vet.title}}<br>
+        <span class="span">description: </span>{{vet.description}}<br>
+        <span class="span">date_added: </span>{{vet.date_added}}<br>
+        <span class="span">release_year: </span>{{vet.release_year}}<br>
+        <span class="span">rating: </span>{{vet.rating}}<br>
+        <hr>
+    </ul>
+    </div>
+  </section>

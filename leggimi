@@ -1,0 +1,6 @@
+Per poter avviare il progetto, una volta aperto, è necessario:
+1)Andare su "Remote Explorer" (si trova nella barra di ricerca a sinistra)
+2)Aprire la porta 4200 e la porta 5000 cliccando su "open browser"
+3)Nella porta 5000 copiare il link URL
+4)Su gitpod aprire in sequenza MondialiAng - src - app - appSetting.ts
+5)Su appSetting.ts sostituire il link già presente con il link copiato precedentemente

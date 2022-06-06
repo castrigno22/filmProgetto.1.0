@@ -1,0 +1,15 @@
+tasks:
+  - name: flask
+    init: cd flask && pip install -r requirements.txt && pip install geopandas && flask run
+  - name: film
+    init: npm i -g @angular/cli
+  - name: src
+    init: cd MondialiAng && npm install replace-in-file --save-dev && npm update && node ./replace.build.js && ng serve --disable-host-check
+
+# Ports to expose on workspace startup
+ports:
+  - port: 4200
+    onOpen: open-browser
+    visibility: public
+  - port: 5000
+    visibility: public
