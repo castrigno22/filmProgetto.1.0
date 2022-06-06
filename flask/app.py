@@ -27,7 +27,7 @@ class StatoCastApi(Resource):
         return Response(resp, mimetype = 'application/json') #risposta angular 
 
 
-api.add_resource(StatoCastApi, '/StatoCast/<string:titles>')
+api.add_resource(StatoCastApi, '/StatoCast/<string:titles>') #assegna la rotta StatoCast 
 
 class InfoFilmApi(Resource):
     def get(self,titles):
@@ -37,7 +37,7 @@ class InfoFilmApi(Resource):
         resp2 = json_util.dumps(resp) 
         return Response(resp2 , mimetype = "application/json")
 
-api.add_resource(InfoFilmApi, '/InfoFilmApi/<string:titles>')
+api.add_resource(InfoFilmApi, '/InfoFilmApi/<string:titles>') #assegna la rotta InfoFilmApi 
 
 if __name__ == '__main__':
     app.run()
